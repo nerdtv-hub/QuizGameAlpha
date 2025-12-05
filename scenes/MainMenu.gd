@@ -17,19 +17,25 @@ func _ready() -> void:
 	NetworkManager.host_disconnected.connect(_on_host_disconnect)
 
 func _on_host_pressed() -> void:
-	NetworkManager.host_game(host_password_field.text)
-	status_label.text = "Status: Hosting..."
-	GameState.add_player(NetworkManager.get_local_player_id(), "Host")
-	get_tree().change_scene_to_file("res://scenes/Lobby.tscn")
+        # Host verwendet denselben Namensfluss wie Clients, um konsistent synchronisiert zu werden
+        var player_name: String = join_name_field.text.strip_edges()
+        if player_name.is_empty():
+                player_name = "Host"
+        NetworkManager.host_game(host_password_field.text, player_name)
+        status_label.text = "Status: Hosting..."
+        GameState.add_player(NetworkManager.get_local_player_id(), player_name)
+        get_tree().change_scene_to_file("res://scenes/Lobby.tscn")
 
 func _on_join_pressed() -> void:
-	var player_name: String = join_name_field.text
-	NetworkManager.join_game(join_ip_field.text, join_password_field.text)
-	status_label.text = "Status: Verbinden..."
-	multiplayer.connected_to_server.connect(
-		Callable(self, "_on_connected_to_server").bind(player_name),
-		CONNECT_ONE_SHOT
-	)
+        var player_name: String = join_name_field.text.strip_edges()
+        if player_name.is_empty():
+                player_name = "Spieler"
+        NetworkManager.join_game(join_ip_field.text, join_password_field.text, player_name)
+        status_label.text = "Status: Verbinden..."
+        multiplayer.connected_to_server.connect(
+                Callable(self, "_on_connected_to_server").bind(player_name),
+                CONNECT_ONE_SHOT
+        )
 	get_tree().change_scene_to_file("res://scenes/Lobby.tscn")
 	
 func _on_connected_to_server(player_name: String) -> void:

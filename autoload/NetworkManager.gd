@@ -13,7 +13,14 @@ var _peer_to_player: Dictionary = {}
 var _next_player_id: int = 1
 var _is_host: bool = false
 var _password: String = ""
-var _pending_player_name: String = ""
+var _pending_player_name: String = "" # Name, den der Client beim Verbinden senden möchte
+var _local_player_name: String = "" # Letzter lokal ausgewählter Name
+
+# Namensdatenfluss (zentralisiert hier):
+# - MainMenu setzt _local_player_name/_pending_player_name, bevor eine Verbindung aufgebaut wird.
+# - Clients senden ihren Namen nach connected_to_server per rpc_update_player_name an den Host.
+# - Host speichert peer_id -> name und verteilt rpc_sync_player an alle Peers.
+# - _register_player überschreibt lokale Spieler nicht mehr mit Platzhaltern, wenn bereits ein Name vorliegt.
 
 func _ready() -> void:
 	multiplayer.peer_connected.connect(_on_peer_connected)
@@ -27,46 +34,55 @@ func is_host() -> bool:
 func get_local_player_id() -> int:
 	return multiplayer.get_unique_id()
 
-func host_game(password: String) -> void:
-	var peer: ENetMultiplayerPeer = ENetMultiplayerPeer.new()
-	var err: Error = peer.create_server(DEFAULT_PORT, MAX_CLIENTS)
-	if err != OK:
-		push_error("Failed to host server: %s" % err)
-		return
-	_is_host = true
-	_password = password
-	_multiplayer_peer = peer
-	multiplayer.multiplayer_peer = peer
-	_register_player(multiplayer.get_unique_id(), "HOST")
+func host_game(password: String, host_name: String = "Host") -> void:
+        var peer: ENetMultiplayerPeer = ENetMultiplayerPeer.new()
+        var err: Error = peer.create_server(DEFAULT_PORT, MAX_CLIENTS)
+        if err != OK:
+                push_error("Failed to host server: %s" % err)
+                return
+        _is_host = true
+        _password = password
+        _local_player_name = host_name
+        _multiplayer_peer = peer
+        multiplayer.multiplayer_peer = peer
+        # Host trägt sich selbst mit dem ausgewählten Namen ein
+        _register_player(multiplayer.get_unique_id(), host_name)
 
-func join_game(ip: String, password: String) -> void:
-	var peer: ENetMultiplayerPeer = ENetMultiplayerPeer.new()
-	var err: Error = peer.create_client(ip, DEFAULT_PORT)
-	if err != OK:
-		push_error("Failed to join server: %s" % err)
-		return
-	_is_host = false
-	_password = password
-	_multiplayer_peer = peer
-	multiplayer.multiplayer_peer = peer
+func join_game(ip: String, password: String, player_name: String) -> void:
+        var peer: ENetMultiplayerPeer = ENetMultiplayerPeer.new()
+        var err: Error = peer.create_client(ip, DEFAULT_PORT)
+        if err != OK:
+                push_error("Failed to join server: %s" % err)
+                return
+        _is_host = false
+        _password = password
+        _pending_player_name = player_name
+        _local_player_name = player_name
+        _multiplayer_peer = peer
+        multiplayer.multiplayer_peer = peer
 
 func close_disconnect() -> void:
-	if multiplayer.multiplayer_peer:
-		multiplayer.multiplayer_peer.close()
-	multiplayer.multiplayer_peer = null
-	_multiplayer_peer = null
-	_player_id_map.clear()
-	_peer_to_player.clear()
-	_next_player_id = 1
-	_is_host = false
+        if multiplayer.multiplayer_peer:
+                multiplayer.multiplayer_peer.close()
+        multiplayer.multiplayer_peer = null
+        _multiplayer_peer = null
+        _player_id_map.clear()
+        _peer_to_player.clear()
+        _next_player_id = 1
+        _is_host = false
+        _pending_player_name = ""
+        _local_player_name = ""
 
 func _register_player(peer_id: int, player_name: String, forced_player_id: int = -1) -> void:
-	# Wenn es den Peer schon gibt, nur den Namen aktualisieren und Signal feuern
-	if _player_id_map.has(peer_id):
-		_player_id_map[peer_id]["name"] = player_name
-		var existing_id: int = _player_id_map[peer_id].get("player_id", peer_id)
-		player_joined.emit(peer_id, existing_id, player_name)
-		return
+        # Lokale Spieler behalten ihren eingegebenen Namen, auch wenn der Host zunächst Platzhalter schickt
+        if peer_id == multiplayer.get_unique_id() and _local_player_name != "":
+                player_name = _local_player_name
+        # Wenn es den Peer schon gibt, nur den Namen aktualisieren und Signal feuern
+        if _player_id_map.has(peer_id):
+                _player_id_map[peer_id]["name"] = player_name
+                var existing_id: int = _player_id_map[peer_id].get("player_id", peer_id)
+                player_joined.emit(peer_id, existing_id, player_name)
+                return
 
 	var player_id: int = forced_player_id if forced_player_id > 0 else _next_player_id
 	_next_player_id = max(_next_player_id, player_id + 1)
