@@ -74,20 +74,24 @@ func close_disconnect() -> void:
         _local_player_name = ""
 
 func _register_player(peer_id: int, player_name: String, forced_player_id: int = -1) -> void:
-        # Lokale Spieler behalten ihren eingegebenen Namen, auch wenn der Host zunächst Platzhalter schickt
-        if peer_id == multiplayer.get_unique_id() and _local_player_name != "":
-                player_name = _local_player_name
-        # Wenn es den Peer schon gibt, nur den Namen aktualisieren und Signal feuern
-        if _player_id_map.has(peer_id):
-                _player_id_map[peer_id]["name"] = player_name
-                var existing_id: int = _player_id_map[peer_id].get("player_id", peer_id)
-                player_joined.emit(peer_id, existing_id, player_name)
-                return
+	# Lokale Spieler behalten ihren eingegebenen Namen, auch wenn der Host zunächst Platzhalter schickt
+	if peer_id == multiplayer.get_unique_id() and _local_player_name != "":
+		player_name = _local_player_name
+	# Wenn es den Peer schon gibt, nur den Namen aktualisieren und Signal feuern
+	if _player_id_map.has(peer_id):
+		_player_id_map[peer_id]["name"] = player_name
+		var existing_id: int = _player_id_map[peer_id].get("player_id", peer_id)
+		# GameState immer hier synchronisieren, damit alle Szenen denselben Namen sehen
+		GameState.add_player(peer_id, player_name)
+		player_joined.emit(peer_id, existing_id, player_name)
+		return
 
 	var player_id: int = forced_player_id if forced_player_id > 0 else _next_player_id
 	_next_player_id = max(_next_player_id, player_id + 1)
 	_player_id_map[peer_id] = {"name": player_name, "player_id": player_id}
 	_peer_to_player[peer_id] = player_id
+	# GameState immer hier synchronisieren, damit alle Szenen denselben Namen sehen
+	GameState.add_player(peer_id, player_name)
 	player_joined.emit(peer_id, player_id, player_name)
 
 func _remove_player(peer_id: int) -> void:
@@ -96,6 +100,8 @@ func _remove_player(peer_id: int) -> void:
 	var player_id: int = _player_id_map[peer_id].get("player_id", peer_id)
 	_player_id_map.erase(peer_id)
 	_peer_to_player.erase(peer_id)
+	# Halte GameState-Status in allen Szenen konsistent
+	GameState.remove_player(player_id)
 	player_left.emit(peer_id, player_id)
 
 func get_player_id(peer_id: int) -> int:
