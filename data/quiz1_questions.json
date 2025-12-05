@@ -1,0 +1,130 @@
+[
+  {
+	"id": "q1_001",
+	"text": "Wie hoch ist der Eiffelturm?",
+	"answers": ["200m", "250m", "300m", "350m"],
+	"correct_index": 2,
+	"difficulty": 1,
+	"category": "Allgemein"
+  },
+  {
+	"id": "q1_002",
+	"text": "Welches dieser Tiere ist ein Säugetier?",
+	"answers": ["Hai", "Frosch", "Delfin", "Forelle"],
+	"correct_index": 2,
+	"difficulty": 1,
+	"category": "Naturwissenschaft"
+  },
+  {
+	"id": "q1_003",
+	"text": "Welche Farbe hat die mittlere Streifen der deutschen Flagge?",
+	"answers": ["Schwarz", "Rot", "Gelb", "Weiß"],
+	"correct_index": 1,
+	"difficulty": 1,
+	"category": "Allgemein"
+  },
+  {
+	"id": "q1_004",
+	"text": "Welches dieser Länder hat keine Küste am Mittelmeer?",
+	"answers": ["Spanien", "Italien", "Österreich", "Griechenland"],
+	"correct_index": 2,
+	"difficulty": 2,
+	"category": "Geografie"
+  },
+  {
+	"id": "q1_005",
+	"text": "In welcher Stadt steht das Brandenburger Tor?",
+	"answers": ["München", "Berlin", "Hamburg", "Köln"],
+	"correct_index": 1,
+	"difficulty": 1,
+	"category": "Geografie"
+  },
+  {
+	"id": "q1_006",
+	"text": "Wie viele Kontinente gibt es allgemein anerkannt?",
+	"answers": ["Fünf", "Sechs", "Sieben", "Acht"],
+	"correct_index": 2,
+	"difficulty": 2,
+	"category": "Allgemein"
+  },
+  {
+	"id": "q1_007",
+	"text": "Welches dieser Elemente ist ein Edelgas?",
+	"answers": ["Sauerstoff", "Stickstoff", "Helium", "Wasserstoff"],
+	"correct_index": 2,
+	"difficulty": 2,
+	"category": "Naturwissenschaft"
+  },
+  {
+	"id": "q1_008",
+	"text": "Wer war der erste Bundeskanzler der Bundesrepublik Deutschland?",
+	"answers": ["Konrad Adenauer", "Willy Brandt", "Helmut Kohl", "Ludwig Erhard"],
+	"correct_index": 0,
+	"difficulty": 2,
+	"category": "Geschichte"
+  },
+  {
+	"id": "q1_009",
+	"text": "In welchem Jahr fiel die Berliner Mauer?",
+	"answers": ["1985", "1987", "1989", "1991"],
+	"correct_index": 2,
+	"difficulty": 1,
+	"category": "Geschichte"
+  },
+  {
+	"id": "q1_010",
+	"text": "Welcher Fluss fließt durch Budapest?",
+	"answers": ["Donau", "Rhein", "Elbe", "Themse"],
+	"correct_index": 0,
+	"difficulty": 2,
+	"category": "Geografie"
+  },
+  {
+	"id": "q1_011",
+	"text": "Welche dieser Einheiten misst elektrische Spannung?",
+	"answers": ["Watt", "Volt", "Ampere", "Ohm"],
+	"correct_index": 1,
+	"difficulty": 2,
+	"category": "Naturwissenschaft"
+  },
+  {
+	"id": "q1_012",
+	"text": "Welcher Planet ist der Sonne am nächsten?",
+	"answers": ["Merkur", "Venus", "Erde", "Mars"],
+	"correct_index": 0,
+	"difficulty": 1,
+	"category": "Naturwissenschaft"
+  },
+  {
+	"id": "q1_013",
+	"text": "Welche Stadt ist die Hauptstadt von Kanada?",
+	"answers": ["Toronto", "Ottawa", "Vancouver", "Montreal"],
+	"correct_index": 1,
+	"difficulty": 3,
+	"category": "Geografie"
+  },
+  {
+	"id": "q1_014",
+	"text": "Welche Erfindung wird oft Johannes Gutenberg zugeschrieben?",
+	"answers": ["Kompass", "Buchdruck mit beweglichen Lettern", "Dampfmaschine", "Telefon"],
+	"correct_index": 1,
+	"difficulty": 3,
+	"category": "Geschichte"
+  },
+  {
+	"id": "q1_015",
+	"text": "Welches dieser Teilgebiete gehört zur Informatik?",
+	"answers": ["Botanik", "Algorithmik", "Geologie", "Meteorologie"],
+	"correct_index": 1,
+	"difficulty": 1,
+	"category": "Allgemein"
+  },
+  {
+	"id": "q1_016",
+	"text": "Woraus besteht der größte Anteil der Luft, die wir atmen?",
+	"answers": ["Sauerstoff", "Kohlenstoffdioxid", "Stickstoff", "Wasserstoff"],
+	"correct_index": 2,
+	"difficulty": 3,
+	"category": "Naturwissenschaft"
+  }
+]

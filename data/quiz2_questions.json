@@ -1,0 +1,98 @@
+[
+  {
+	"id": "e1_001",
+	"text": "In welchem Jahr wurde Godot zum ersten Mal veröffentlicht?",
+	"solution_number": 2014,
+	"category": "Software"
+  },
+  {
+	"id": "e1_002",
+	"text": "Wie viele Kilometer lang ist der Amazonas ungefähr?",
+	"solution_number": 6400,
+	"category": "Geografie"
+  },
+  {
+	"id": "e1_003",
+	"text": "Wie viele Knochen hat ein erwachsener Mensch?",
+	"solution_number": 206,
+	"category": "Wissenschaft"
+  },
+  {
+	"id": "e1_004",
+	"text": "In welchem Jahr landete der erste Mensch auf dem Mond?",
+	"solution_number": 1969,
+	"category": "Geschichte"
+  },
+  {
+	"id": "e1_005",
+	"text": "Wie viel Prozent der Erdoberfläche sind von Wasser bedeckt?",
+	"solution_number": 71,
+	"category": "Wissenschaft"
+  },
+  {
+	"id": "e1_006",
+	"text": "Wie alt wurde Albert Einstein?",
+	"solution_number": 76,
+	"category": "Geschichte"
+  },
+  {
+	"id": "e1_007",
+	"text": "Wie viele Einwohner hat Deutschland (gerundet)?",
+	"solution_number": 83000000,
+	"category": "Geografie"
+  },
+  {
+	"id": "e1_008",
+	"text": "Wie hoch ist der höchste Berg der Welt (Mount Everest) in Metern?",
+	"solution_number": 8849,
+	"category": "Geografie"
+  },
+  {
+	"id": "e1_009",
+	"text": "In welchem Jahr erschien das erste iPhone?",
+	"solution_number": 2007,
+	"category": "Technik"
+  },
+  {
+	"id": "e1_010",
+	"text": "Wie viele Sekunden hat ein Tag?",
+	"solution_number": 86400,
+	"category": "Allgemein"
+  },
+  {
+	"id": "e1_011",
+	"text": "Wie viele Zähne hat ein erwachsener Mensch normalerweise?",
+	"solution_number": 32,
+	"category": "Wissenschaft"
+  },
+  {
+	"id": "e1_012",
+	"text": "Wie viele Länder gibt es derzeit auf der Welt (UN-Mitglieder)?",
+	"solution_number": 193,
+	"category": "Allgemein"
+  },
+  {
+	"id": "e1_013",
+	"text": "In welchem Jahr begann der Zweite Weltkrieg?",
+	"solution_number": 1939,
+	"category": "Geschichte"
+  },
+  {
+	"id": "e1_014",
+	"text": "Wie viele Kilometer beträgt der Umfang der Erde am Äquator?",
+	"solution_number": 40075,
+	"category": "Geografie"
+  },
+  {
+	"id": "e1_015",
+	"text": "Wie viele Minuten dauert ein Fußballspiel ohne Nachspielzeit?",
+	"solution_number": 90,
+	"category": "Sport"
+  },
+  {
+	"id": "e1_016",
+	"text": "Wie weit ist die Erde durchschnittlich von der Sonne entfernt (in Millionen km)?",
+	"solution_number": 150,
+	"category": "Wissenschaft"
+  }
+]

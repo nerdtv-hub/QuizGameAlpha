@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddeuyja6xhe70"]
+
+[ext_resource type="Script" uid="uid://rldqv84v8yp2" path="res://scenes/Lobby.gd" id="1"]
+
+[node name="Lobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBox" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerList" type="VBoxContainer" parent="Panel/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Settings" type="VBoxContainer" parent="Panel/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RoundsLabel" type="Label" parent="Panel/HBox/Settings"]
+layout_mode = 2
+text = "Anzahl Runden"
+
+[node name="Rounds" type="SpinBox" parent="Panel/HBox/Settings"]
+layout_mode = 2
+min_value = 1.0
+max_value = 10.0
+value = 1.0
+
+[node name="QuizModes" type="VBoxContainer" parent="Panel/HBox/Settings"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="Panel/HBox/Settings"]
+layout_mode = 2
+text = "Spiel starten"
+
+[node name="Status" type="Label" parent="Panel/HBox/Settings"]
+layout_mode = 2
+text = "Warte auf Spieler..."

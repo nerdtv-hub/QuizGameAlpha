@@ -1,0 +1,351 @@
+[
+  {
+	"id": "c_tiere_100_01",
+	"category": "Tiere",
+	"value": 100,
+	"text": "Wie viele Beine hat eine Spinne?",
+	"answers": ["4", "6", "8", "10"],
+	"correct_index": 2
+  },
+  {
+	"id": "c_tiere_200_01",
+	"category": "Tiere",
+	"value": 200,
+	"text": "Welches dieser Tiere ist ein Säugetier?",
+	"answers": ["Hai", "Krokodil", "Pinguin", "Fledermaus"],
+	"correct_index": 3
+  },
+  {
+	"id": "c_tiere_300_01",
+	"category": "Tiere",
+	"value": 300,
+	"text": "Nenne eine Tierart, die im australischen Outback heimisch ist."
+  },
+  {
+	"id": "c_tiere_400_01",
+	"category": "Tiere",
+	"value": 400,
+	"text": "Wie nennt man die Lehre von den Vögeln?"
+  },
+  {
+	"id": "c_tiere_500_01",
+	"category": "Tiere",
+	"value": 500,
+	"text": "Welches Tier ist das größte heute lebende Landraubtier?"
+  },
+
+  {
+	"id": "c_geschichte_100_01",
+	"category": "Geschichte",
+	"value": 100,
+	"text": "In welchem Jahr fiel die Berliner Mauer?",
+	"answers": ["1985", "1987", "1989", "1991"],
+	"correct_index": 2
+  },
+  {
+	"id": "c_geschichte_200_01",
+	"category": "Geschichte",
+	"value": 200,
+	"text": "Wer war der erste Bundeskanzler der Bundesrepublik Deutschland?",
+	"answers": ["Konrad Adenauer", "Willy Brandt", "Helmut Schmidt", "Helmut Kohl"],
+	"correct_index": 0
+  },
+  {
+	"id": "c_geschichte_300_01",
+	"category": "Geschichte",
+	"value": 300,
+	"text": "Wie hieß das antike Römische Reich mit vollem Namen?"
+  },
+  {
+	"id": "c_geschichte_400_01",
+	"category": "Geschichte",
+	"value": 400,
+	"text": "Welches Ereignis markiert historisch den Beginn des Ersten Weltkriegs?"
+  },
+  {
+	"id": "c_geschichte_500_01",
+	"category": "Geschichte",
+	"value": 500,
+	"text": "Nenne eine zentrale Ursache für den Ausbruch der Französischen Revolution."
+  },
+
+  {
+	"id": "c_geografie_100_01",
+	"category": "Geografie",
+	"value": 100,
+	"text": "Welche dieser Städte ist die Hauptstadt von Frankreich?",
+	"answers": ["Lyon", "Paris", "Marseille", "Nizza"],
+	"correct_index": 1
+  },
+  {
+	"id": "c_geografie_200_01",
+	"category": "Geografie",
+	"value": 200,
+	"text": "Welcher dieser Flüsse fließt durch Budapest?",
+	"answers": ["Rhein", "Donau", "Elbe", "Themse"],
+	"correct_index": 1
+  },
+  {
+	"id": "c_geografie_300_01",
+	"category": "Geografie",
+	"value": 300,
+	"text": "Nenne ein Land, das sowohl in Europa als auch in Asien liegt."
+  },
+  {
+	"id": "c_geografie_400_01",
+	"category": "Geografie",
+	"value": 400,
+	"text": "Wie heißt die größte Wüste der Welt (nach Fläche, nicht nach Temperatur)?"
+  },
+  {
+	"id": "c_geografie_500_01",
+	"category": "Geografie",
+	"value": 500,
+	"text": "Nenne drei Länder, die an Deutschland grenzen."
+  },
+
+  {
+	"id": "c_wissenschaft_100_01",
+	"category": "Wissenschaft",
+	"value": 100,
+	"text": "Welche dieser Einheiten misst elektrische Spannung?",
+	"answers": ["Watt", "Volt", "Ampere", "Ohm"],
+	"correct_index": 1
+  },
+  {
+	"id": "c_wissenschaft_200_01",
+	"category": "Wissenschaft",
+	"value": 200,
+	"text": "Welches dieser Teilgebiete gehört zur Informatik?",
+	"answers": ["Botanik", "Algorithmik", "Geologie", "Meteorologie"],
+	"correct_index": 1
+  },
+  {
+	"id": "c_wissenschaft_300_01",
+	"category": "Wissenschaft",
+	"value": 300,
+	"text": "Wie nennt man die kleinste Einheit eines chemischen Elements, die noch dessen Eigenschaften besitzt?"
+  },
+  {
+	"id": "c_wissenschaft_400_01",
+	"category": "Wissenschaft",
+	"value": 400,
+	"text": "Beschreibe kurz den Unterschied zwischen einem Virus und einem Bakterium."
+  },
+  {
+	"id": "c_wissenschaft_500_01",
+	"category": "Wissenschaft",
+	"value": 500,
+	"text": "Was versteht man in der Physik unter dem zweiten Hauptsatz der Thermodynamik?"
+  },
+
+  {
+	"id": "c_filme_100_01",
+	"category": "Filme",
+	"value": 100,
+	"text": "Welche dieser Figuren gehört zum Star-Wars-Universum?",
+	"answers": ["Harry Potter", "Darth Vader", "Indiana Jones", "Frodo"],
+	"correct_index": 1
+  },
+  {
+	"id": "c_filme_200_01",
+	"category": "Filme",
+	"value": 200,
+	"text": "Welcher dieser Filme stammt von Regisseur Christopher Nolan?",
+	"answers": ["Inception", "Titanic", "Avatar", "Jurassic Park"],
+	"correct_index": 0
+  },
+  {
+	"id": "c_filme_300_01",
+	"category": "Filme",
+	"value": 300,
+	"text": "Nenne einen Film, in dem Leonardo DiCaprio eine Hauptrolle spielt."
+  },
+  {
+	"id": "c_filme_400_01",
+	"category": "Filme",
+	"value": 400,
+	"text": "Wie heißt der erste Spielfilm aus dem Marvel Cinematic Universe (MCU)?"
+  },
+  {
+	"id": "c_filme_500_01",
+	"category": "Filme",
+	"value": 500,
+	"text": "Nenne einen international bekannten Regisseur aus Europa."
+  },
+
+  {
+	"id": "c_musik_100_01",
+	"category": "Musik",
+	"value": 100,
+	"text": "Welches dieser Instrumente ist ein Tasteninstrument?",
+	"answers": ["Gitarre", "Klavier", "Violine", "Trompete"],
+	"correct_index": 1
+  },
+  {
+	"id": "c_musik_200_01",
+	"category": "Musik",
+	"value": 200,
+	"text": "Welcher dieser Künstler ist für Popmusik bekannt?",
+	"answers": ["Beethoven", "Mozart", "Ed Sheeran", "Bach"],
+	"correct_index": 2
+  },
+  {
+	"id": "c_musik_300_01",
+	"category": "Musik",
+	"value": 300,
+	"text": "Nenne eine Musikrichtung, die typischerweise mit elektronischer Tanzmusik verbunden ist."
+  },
+  {
+	"id": "c_musik_400_01",
+	"category": "Musik",
+	"value": 400,
+	"text": "Wie nennt man den Takt, der aus drei Schlägen pro Takt besteht und oft bei Walzern verwendet wird?"
+  },
+  {
+	"id": "c_musik_500_01",
+	"category": "Musik",
+	"value": 500,
+	"text": "Nenne einen Komponisten der Romantik."
+  },
+
+  {
+	"id": "c_sport_100_01",
+	"category": "Sport",
+	"value": 100,
+	"text": "Wie viele Minuten dauert ein reguläres Fußballspiel ohne Nachspielzeit?",
+	"answers": ["60", "75", "90", "105"],
+	"correct_index": 2
+  },
+  {
+	"id": "c_sport_200_01",
+	"category": "Sport",
+	"value": 200,
+	"text": "Welcher dieser Sportarten wird typischerweise mit einem Tennisball gespielt?",
+	"answers": ["Tennis", "Handball", "Basketball", "Volleyball"],
+	"correct_index": 0
+  },
+  {
+	"id": "c_sport_300_01",
+	"category": "Sport",
+	"value": 300,
+	"text": "Nenne eine Disziplin, die Teil der Leichtathletik ist."
+  },
+  {
+	"id": "c_sport_400_01",
+	"category": "Sport",
+	"value": 400,
+	"text": "Wie heißt die internationale Organisation, die die Olympischen Spiele organisiert?"
+  },
+  {
+	"id": "c_sport_500_01",
+	"category": "Sport",
+	"value": 500,
+	"text": "Nenne eine Sportart, in der Deutschland mehrfach Weltmeister geworden ist."
+  },
+
+  {
+	"id": "c_technik_100_01",
+	"category": "Technik",
+	"value": 100,
+	"text": "Was ist ein Smartphone hauptsächlich?",
+	"answers": ["Küchengerät", "Fahrzeug", "Computer im Hosentaschenformat", "Musikinstrument"],
+	"correct_index": 2
+  },
+  {
+	"id": "c_technik_200_01",
+	"category": "Technik",
+	"value": 200,
+	"text": "Welches dieser Geräte dient vor allem zum Speichern von Daten?",
+	"answers": ["Monitor", "Festplatte", "Maus", "Tastatur"],
+	"correct_index": 1
+  },
+  {
+	"id": "c_technik_300_01",
+	"category": "Technik",
+	"value": 300,
+	"text": "Nenne eine Programmiersprache, die häufig für Webentwicklung verwendet wird."
+  },
+  {
+	"id": "c_technik_400_01",
+	"category": "Technik",
+	"value": 400,
+	"text": "Was versteht man unter künstlicher Intelligenz (KI)?"
+  },
+  {
+	"id": "c_technik_500_01",
+	"category": "Technik",
+	"value": 500,
+	"text": "Nenne eine bekannte Open-Source-Software."
+  },
+
+  {
+	"id": "c_literatur_100_01",
+	"category": "Literatur",
+	"value": 100,
+	"text": "Welches dieser Werke stammt von William Shakespeare?",
+	"answers": ["Faust", "Hamlet", "Der Prozess", "Die Verwandlung"],
+	"correct_index": 1
+  },
+  {
+	"id": "c_literatur_200_01",
+	"category": "Literatur",
+	"value": 200,
+	"text": "Welcher dieser Begriffe bezeichnet eine Gedichtform?",
+	"answers": ["Sonett", "Novelle", "Roman", "Biografie"],
+	"correct_index": 0
+  },
+  {
+	"id": "c_literatur_300_01",
+	"category": "Literatur",
+	"value": 300,
+	"text": "Nenne einen deutschen Dichter oder eine deutsche Dichterin der Klassik oder Romantik."
+  },
+  {
+	"id": "c_literatur_400_01",
+	"category": "Literatur",
+	"value": 400,
+	"text": "Was versteht man in der Literatur unter einem Erzähler in Ich-Form?"
+  },
+  {
+	"id": "c_literatur_500_01",
+	"category": "Literatur",
+	"value": 500,
+	"text": "Nenne ein literarisches Werk, das als Klassiker der Weltliteratur gilt."
+  },
+
+  {
+	"id": "c_essen_100_01",
+	"category": "Essen & Trinken",
+	"value": 100,
+	"text": "Welche dieser Speisen ist typischerweise italienisch?",
+	"answers": ["Sushi", "Pizza", "Currywurst", "Paella"],
+	"correct_index": 1
+  },
+  {
+	"id": "c_essen_200_01",
+	"category": "Essen & Trinken",
+	"value": 200,
+	"text": "Welches dieser Getränke enthält normalerweise Koffein?",
+	"answers": ["Wasser", "Apfelsaft", "Cola", "Milch"],
+	"correct_index": 2
+  },
+  {
+	"id": "c_essen_300_01",
+	"category": "Essen & Trinken",
+	"value": 300,
+	"text": "Nenne ein Gericht, das typischerweise mit Reis zubereitet wird."
+  },
+  {
+	"id": "c_essen_400_01",
+	"category": "Essen & Trinken",
+	"value": 400,
+	"text": "Was versteht man unter einer vegetarischen Ernährung?"
+  },
+  {
+	"id": "c_essen_500_01",
+	"category": "Essen & Trinken",
+	"value": 500,
+	"text": "Nenne eine Küche (Land/Region), die für besonders scharfe Gerichte bekannt ist."
+  }
+]
