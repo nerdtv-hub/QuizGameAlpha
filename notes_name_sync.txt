@@ -1,0 +1,4 @@
+Namens-Synchronisationsanalyse:
+- Der Spielername kommt aus scenes/MainMenu.gd (join_name_field), wird aber beim ersten rpc_sync_player vom Host noch als Platzhalter "Spieler %d" verteilt.
+- NetworkManager._register_player wurde lokal auf dem Client mit diesem Platzhalter aufgerufen und hat damit den eingegebenen Namen überschrieben, bevor rpc_update_player_name den echten Namen an den Host schickte und zurücksynchronisierte.
+- Lösung: Den lokal eingegebenen Namen (_local_player_name) beim Registrieren des eigenen Peers priorisieren, sodass Platzhalter den korrekten Namen nicht mehr überbieten.
